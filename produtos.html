@@ -6,23 +6,7 @@
     <title>Produtos</title>
 </head>
 
-<script>
-   const produtos = {
-    sofa_promocao : "disponivel",
-    sofa : "indisponivel",
-    mesa_jantar : "disponivel",
-    mesa_madeira : "disponivel",
-    kit_cadeiras : "indisponivel",
-    estante_madeira : "disponivel",
-   };
-   function verificar_disponibilidade(produto) {
-    if (produtos[produto] === "disponivel") {
-        window.location.href = "comprar.html";
-    } else {
-        window.location.href = "indisponivel.html";
-    }
-   }
-</script>
+<script src="script.js"></script>
 
 <body>
     <div style="background-image: url('imagens/piso.jpeg.avif');
@@ -156,60 +140,82 @@
 </ul>
 <h2>Tabela:</h2>
 
-<table border="1">
+<table border="1" style="width: 100%; border-collapse: collapse; text-align: center;">
     <thead>
         <tr>
             <th>Produto</th>
             <th>Preço</th>
             <th>Disponibilidade</th>
-            <th></th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><strong>Sofá(promoção)</strong></td>
-            <td><strong>R$ 20,99</strong></td>
-            <td style="color: rgb(50, 29, 167); "align="center">Disponivel</td>
-            <td><button onclick="verificar_disponibilidade('sofa_promocao')" style="color: black; text-decoration: none;">comprar</button>
-            <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
+            <td style="text-align: center;"><strong>Sofá (promoção)</strong></td>
+            <td style="text-align: center;"><strong>R$ 20,99</strong></td>
+            <td style="text-align: center; color: rgb(50, 29, 167);">Disponível</td>
+            <td style="text-align: center; padding: 0;">
+                <div style="display: flex; flex-direction: column; gap: 5px; height: 100%;">
+                    <button onclick="verificar_disponibilidade('sofa_promocao')" style="width: 100%; color: black; text-decoration: none; border: none; background-color: #f0f0f0; cursor: pointer;">Comprar</button>
+                    <button style="width: 100%; color: black; text-decoration: none; border: none; background-color: #dcdcdc; cursor: pointer;">Adicionar ao Carrinho</button>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td align="center"><strong>Sofá</strong></td>
-            <td><strong>R$ 150,00</strong></td>
-            <td style="color: red;" align="center">Indisponivel</td>
-            <td><button onclick="verificar_disponibilidade('sofa')" style="color: black; text-decoration: none;">comprar</button>
-                <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
+            <td style="text-align: center;"><strong>Sofá</strong></td>
+            <td style="text-align: center;"><strong>R$ 150,00</strong></td>
+            <td style="text-align: center; color: red;">Indisponível</td>
+            <td style="text-align: center; padding: 0;">
+                <div style="display: flex; flex-direction: column; gap: 5px; height: 100%;">
+                    <button onclick="verificar_disponibilidade('sofa')" style="width: 100%; color: black; text-decoration: none; border: none; background-color: #f0f0f0; cursor: pointer;">Comprar</button>
+                    <button style="width: 100%; color: black; text-decoration: none; border: none; background-color: #dcdcdc; cursor: pointer;">Adicionar ao Carrinho</button>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td align="center"><strong>Mesa de jantar</strong></td>
-            <td><strong>R$ 199,99</strong></td>
-            <td style="color: rgb(50, 29, 167); "align="center">Disponivel</td>
-            <td><button onclick="verificar_disponibilidade('mesa_jantar')" style="color: black; text-decoration: none;">comprar</button>
-                <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
+            <td style="text-align: center;"><strong>Mesa de jantar</strong></td>
+            <td style="text-align: center;"><strong>R$ 199,99</strong></td>
+            <td style="text-align: center; color: rgb(50, 29, 167);">Disponível</td>
+            <td style="text-align: center; padding: 0;">
+                <div style="display: flex; flex-direction: column; gap: 5px; height: 100%;">
+                    <button onclick="verificar_disponibilidade('mesa_jantar')" style="width: 100%; color: black; text-decoration: none; border: none; background-color: #f0f0f0; cursor: pointer;">Comprar</button>
+                    <button style="width: 100%; color: black; text-decoration: none; border: none; background-color: #dcdcdc; cursor: pointer;">Adicionar ao Carrinho</button>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td align="center"><strong>Mesa de madeira</strong></td>
-            <td><strong>R$ 149,99</strong></td>
-            <td style="color: rgb(50, 29, 167); "align="center">Disponivel</td>
-            <td><button onclick="verificar_disponibilidade('mesa_madeira')" style="color: black; text-decoration: none;">comprar</button>
-                <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
+            <td style="text-align: center;"><strong>Mesa de madeira</strong></td>
+            <td style="text-align: center;"><strong>R$ 149,99</strong></td>
+            <td style="text-align: center; color: rgb(50, 29, 167);">Disponível</td>
+            <td style="text-align: center; padding: 0;">
+                <div style="display: flex; flex-direction: column; gap: 5px; height: 100%;">
+                    <button onclick="verificar_disponibilidade('mesa_madeira')" style="width: 100%; color: black; text-decoration: none; border: none; background-color: #f0f0f0; cursor: pointer;">Comprar</button>
+                    <button style="width: 100%; color: black; text-decoration: none; border: none; background-color: #dcdcdc; cursor: pointer;">Adicionar ao Carrinho</button>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td align="center"><strong>Kit 6 cadeiras</strong></td>
-            <td><strong>R$ 99,99</strong></td>
-            <td style="color: red; "align="center">Indisponivel</td>
-            <td><button onclick="verificar_disponibilidade('kit_cadeiras')" style="color: black; text-decoration: none;">comprar</button>
-                <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
+            <td style="text-align: center;"><strong>Kit 6 cadeiras</strong></td>
+            <td style="text-align: center;"><strong>R$ 99,99</strong></td>
+            <td style="text-align: center; color: red;">Indisponível</td>
+            <td style="text-align: center; padding: 0;">
+                <div style="display: flex; flex-direction: column; gap: 5px; height: 100%;">
+                    <button onclick="verificar_disponibilidade('kit_cadeiras')" style="width: 100%; color: black; text-decoration: none; border: none; background-color: #f0f0f0; cursor: pointer;">Comprar</button>
+                    <button style="width: 100%; color: black; text-decoration: none; border: none; background-color: #dcdcdc; cursor: pointer;">Adicionar ao Carrinho</button>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td align="center"><strong>Estante de madeira</strong></td>
-            <td><strong>R$ 199,90</strong></td>
-            <td style="color: rgb(50, 29, 167); "align="center">Disponivel</td>
-            <td><button onclick="verificar_disponibilidade('estante_madeira')" style="color: black; text-decoration: none;">comprar</button>
-                <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
-        </tr>
+            <td style="text-align: center;"><strong>Estante de madeira</strong></td>
+            <td style="text-align: center;"><strong>R$ 199,90</strong></td>
+            <td style="text-align: center; color: rgb(50, 29, 167);">Disponível</td>
+            <td style="text-align: center; padding: 0;">
+                <div style="display: flex; flex-direction: column; gap: 5px; height: 100%;">
+                    <button onclick="verificar_disponibilidade('estante_madeira')" style="width: 100%; color: black; text-decoration: none; border: none; background-color: #f0f0f0; cursor: pointer;">Comprar</button>
+                    <button style="width: 100%; color: black; text-decoration: none; border: none; background-color: #dcdcdc; cursor: pointer;">Adicionar ao Carrinho</button>
+                </div>
+            </td>
     </tbody>
 </table>
-
 </body>
 </html>

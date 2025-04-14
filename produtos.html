@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
 </head>
+
+<script>
+   const produtos = {
+    sofa_promocao : "disponivel",
+    sofa : "indisponivel",
+    mesa_jantar : "disponivel",
+    mesa_madeira : "disponivel",
+    kit_cadeiras : "indisponivel",
+    estante_madeira : "disponivel",
+   };
+   function verificar_disponibilidade(produto) {
+    if (produtos[produto] === "disponivel") {
+        window.location.href = "comprar.html";
+    } else {
+        window.location.href = "indisponivel.html";
+    }
+   }
+</script>
+
 <body>
     <div style="background-image: url('imagens/piso.jpeg.avif');
         background-size: cover;
@@ -23,9 +42,12 @@
             </tr>
         </thead>    
     </table>
-    <button><a href="index.html" style="color: black;"><--Voltar</a></button>
+    <a href="index.html">
+        <img src="imagens/botao_home.jpeg" alt="Botão Home" style="width: 100px; height: 100px; display: block; margin: 10px auto;" align="left"> <br>
+    </a>
     
-    <h2 style="margin-top: 20px;">Produtos Disponíveis:</h2>
+    <h2 style="margin-top: 20px;" align="left"><br><br>
+        <br>Produtos Disponíveis:</h2>
     <ul style="display: flex;
     flex-wrap: wrap;
     list-style-type: none;
@@ -42,7 +64,7 @@
         <p style="font-weight: bold;">MEGA PROMOÇÃO!!</p>
         <img src="imagens/sofakk.jpg" alt="Sofá velho" style="width: 250px; height: 150px; display: block; margin: 0 auto;">
         <div style="margin-top: 5px;">
-            <button><a href="" style="color: black; text-decoration: none;">Comprar</a></button>
+            <button onclick="verificar_disponibilidade('sofa_promocao')" style="color: black; text-decoration: none;">Comprar</button>
             <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button>
         </div>
         <p style="margin-top: 5px;">SOFA em OTIMO ESTADO <br>
@@ -59,7 +81,7 @@
         <p style="font-weight: bold;">Sofá</p>
         <img src="imagens/sofa.jpeg" alt="Sofá" style="width: 250px; height: 150px; display: block; margin: 0 auto;">
         <div style="margin-top: 5px;">
-            <button><a href="" style="color: black; text-decoration: none;">Comprar</a></button>
+            <button onclick="verificar_disponibilidade('sofa')" style="color: black; text-decoration: none;">comprar</button>
             <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button>
         </div>
         <p style="margin-top: 5px;">Sofa usado <br>
@@ -75,7 +97,7 @@
         <p style="font-weight: bold;">Mesa de jantar</p>
         <img src="imagens/mesa_janta.jpg" alt="Mesa de jantar" style="width: 250px; height: 150px; display: block; margin: 0 auto;">
         <div style="margin-top: 5px;">
-            <button><a href="" style="color: black; text-decoration: none;">Comprar</a></button>
+            <button onclick="verificar_disponibilidade('mesa_jantar')" style="color: black; text-decoration: none;">comprar</button>
             <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button>
         </div>
         <p style="margin-top: 5px;">Mesa de jantar em bom estado <br>
@@ -91,7 +113,7 @@
         <p style="font-weight: bold;">Mesa de madeira</p>
         <img src="imagens/foto_mesa.jpeg" alt="Mesa de Madeira" style="width: 250px; height: 150px; display: block; margin: 0 auto;">
         <div style="margin-top: 5px;">
-            <button><a href="" style="color: black; text-decoration: none;">Comprar</a></button>
+            <button onclick="verificar_disponibilidade('mesa_madeira')" style="color: black; text-decoration: none;">comprar</button>
             <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button>
         </div>
         <p style="margin-top: 5px;">Mesa de madeira em ótimo estado <br>
@@ -107,7 +129,7 @@
         <p style="font-weight: bold;">KIT 6 cadeiras</p>
         <img src="imagens/kit_ca.jpeg" alt="Kit 6 cadeiras" style="width: 250px; height: 200px; display: block; margin: 0 auto;">
         <div style="margin-top: 5px;">
-            <button><a href="" style="color: black; text-decoration: none;">Comprar</a></button>
+            <button onclick="verificar_disponibilidade('kit_cadeiras')" style="color: black; text-decoration: none;">comprar</button>
             <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button>
         </div>
         <p style="margin-top: 5px;">KIT 6 cadeiras em bom estado <br>
@@ -123,7 +145,7 @@
     <p style="font-weight: bold;">Estante de madeira</p>
 <img src="imagens/estante_m.jpeg" alt="Estante de madeira" style="width: 250px; height: 150px; display: block; margin: 0 auto;">
         <div style="margin-top: 5px;">
-            <button><a href="" style="color: black; text-decoration: none;">Comprar</a></button>
+            <button onclick="verificar_disponibilidade('estante_madeira')" style="color: black; text-decoration: none;">comprar</button>
             <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button>
         </div>
         <p style="margin-top: 5px;">Estante de madeira em bom estado <br>
@@ -148,39 +170,46 @@
             <td><strong>Sofá(promoção)</strong></td>
             <td><strong>R$ 20,99</strong></td>
             <td style="color: rgb(50, 29, 167); "align="center">Disponivel</td>
-            <td><button><a href="" style="color: black; text-decoration: none;">Comprar</a></button><button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
+            <td><button onclick="verificar_disponibilidade('sofa_promocao')" style="color: black; text-decoration: none;">comprar</button>
+            <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
         </tr>
         <tr>
             <td align="center"><strong>Sofá</strong></td>
             <td><strong>R$ 150,00</strong></td>
             <td style="color: red;" align="center">Indisponivel</td>
-            <td><button><a href="" style="color: black; text-decoration: none;">Comprar</a></button><button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
+            <td><button onclick="verificar_disponibilidade('sofa')" style="color: black; text-decoration: none;">comprar</button>
+                <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
         </tr>
         <tr>
             <td align="center"><strong>Mesa de jantar</strong></td>
             <td><strong>R$ 199,99</strong></td>
             <td style="color: rgb(50, 29, 167); "align="center">Disponivel</td>
-            <td><button><a href="" style="color: black; text-decoration: none;">Comprar</a></button><button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
+            <td><button onclick="verificar_disponibilidade('mesa_jantar')" style="color: black; text-decoration: none;">comprar</button>
+                <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
         </tr>
         <tr>
             <td align="center"><strong>Mesa de madeira</strong></td>
             <td><strong>R$ 149,99</strong></td>
             <td style="color: rgb(50, 29, 167); "align="center">Disponivel</td>
-            <td><button><a href="" style="color: black; text-decoration: none;">Comprar</a></button><button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
+            <td><button onclick="verificar_disponibilidade('mesa_madeira')" style="color: black; text-decoration: none;">comprar</button>
+                <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
         </tr>
         <tr>
             <td align="center"><strong>Kit 6 cadeiras</strong></td>
             <td><strong>R$ 99,99</strong></td>
             <td style="color: red; "align="center">Indisponivel</td>
-            <td><button><a href="" style="color: black; text-decoration: none;">Comprar</a></button><button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
+            <td><button onclick="verificar_disponibilidade('kit_cadeiras')" style="color: black; text-decoration: none;">comprar</button>
+                <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
         </tr>
         <tr>
             <td align="center"><strong>Estante de madeira</strong></td>
             <td><strong>R$ 199,90</strong></td>
             <td style="color: rgb(50, 29, 167); "align="center">Disponivel</td>
-            <td><button><a href="" style="color: black; text-decoration: none;">Comprar</a></button><button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
+            <td><button onclick="verificar_disponibilidade('estante_madeira')" style="color: black; text-decoration: none;">comprar</button>
+                <button><a href="" style="color: black; text-decoration: none;">Adicionar ao Carrinho</a></button></td>
         </tr>
     </tbody>
 </table>
+
 </body>
 </html>

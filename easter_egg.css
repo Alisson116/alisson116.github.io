@@ -1,0 +1,12 @@
+.easter-egg {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: 10px auto;
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+.easter-egg:hover {
+    opacity: 1;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara ou Coroa</title>
+    <script src="script.js"></script>
+    <style>
+    .botao {
+        padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 20px auto;
+            display: block;
+    }
+    .botao:hover {
+        background-color: #0056b3;
+    }
+    .botao:active {
+        background-color: #004085;
+    }
+    .moeda_a {
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        display: block;
+
+    }
+    .moeda_b {
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        display: none;
+    }
+
+
+    </style>
+</head>
+
+    <body> 
+        <script> function cara_coroa()
+    {
+        
+            let x
+            let moeda
+            let resultado = Math.random(); 
+            if  (resultado <0.5) 
+        {
+            moeda = "cara";
+        }
+            else if (resultado >=0.5) 
+        {
+            moeda = "coroa";
+        }
+        console.log("Resultado", resultado, "Moeda:" ,moeda);
+        if (moeda == "cara")
+        {
+            document.getElementById("cara").style.display = "block";
+            document.getElementById("coroa").style.display = "none";
+        }
+        else if (moeda == "coroa")
+        {
+            document.getElementById("coroa").style.display = "block";
+            document.getElementById("cara").style.display = "none";
+        }
+        else
+        {
+            alert("Erro ao jogar moeda!");
+        }
+        x = moeda;
+        if (x == "cara")
+        {
+            document.getElementById("X").innerHTML = "Você ganhou 10% de desconto!";
+        }
+        else if (x == "coroa")
+        {
+            document.getElementById("X").innerHTML = "Você ganhou 5% de desconto!";
+        }
+        else
+        {
+            alert("Erro ao jogar moeda!");
+        }
+    }
+    </script>
+       
+        
+        <div style="background-image: url('imagens/piso.jpeg.avif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 20px;">
+        <h1 align="center"><i>Wood Company</i></h1>
+    </div>
+        <table style="width: 100%;
+        background-color: #333;
+        text-align: center;
+        border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th style="padding: 10px; color: white;">Cara ou Coroa</th>
+                </tr>
+            </thead>    
+        </table>
+        <a href="index.html">
+            <img src="imagens/botao_home.png" alt="Botão Home" style="width: 100px; height: 100px; display: block; margin: 10px auto;" align="left"> <br>
+        </a>
+        <h2>Você encontrou um easter egg! <br> Parabéns!<br></h2>
+        <h2 style="color: #333;" align="center">Jogue <span style="color: brown;">Cara ou Coroa</span> para ganhar desconto!!</h2>
+        <img src="imagens/1_real_cara.png" alt="Cara" class="moeda_a" id="cara">
+        <img src="imagens/1_real_coroa.png" alt="Coroa" id="coroa" class="moeda_b">
+        <h3 id="X"></h3>
+        <button class="botao" onclick="cara_coroa()">Jogar</button>
+       
+        <script>
+            let mensagem = "Você encontrou um easter egg! Parabéns!";
+            function popup(mensagem) {
+                alert(mensagem);
+            }
+            popup(mensagem);
+            
+        </script>
+       
+       
+        
+
+
+
+        
+    </body>
+</html>

@@ -6,6 +6,26 @@
     <title>contato</title>
 </head>
 <script src="script.js"></script>
+<style>
+   .numero 
+   {
+    display: flex;
+    align-items: left; 
+    justify-content: flex-start;
+    gap: 10px; 
+    margin: 10px 0;
+   }
+   .numero img 
+   {
+    width: 30px; 
+    height: 30px;
+   }
+   .numero h2 
+   {
+    margin: 0;
+    font-size: 1.5em;
+   }
+</style>
 <body>
     <div style="background-image: url('imagens/piso.jpeg.avif');
         background-size: cover;
@@ -27,5 +47,24 @@
     <a href="index.html">
         <img src="imagens/botao_home.png" alt="Botão Home" style="width: 100px; height: 100px; display: block; margin: 10px auto;" align="left"> <br>
     </a>
+    <h2>Abaixo segue os nossos <span style="color: brown;">canais de atendimento</span>:<br><br><br></h2>
+    
+    <div class="numero">
+        <img src="/imagens/whats.png" alt="logo_Whatsapp">
+        <h2>Telefone: <span style="color: green;">(53)98765-4321</span></h2>
+    </div>
+    <div class="numero">
+        <img src="/imagens/email.png" alt="Logo_Email">
+        <h2>Email: <span style="color: red;">SiteEmailTeste_fake@email.com</span></h2>
+    </div>
+    <div class="numero">
+        <img src="/imagens/insta.png" alt="Logo_Instagram">
+        <h2>Instagram: <span style="color: purple;">@LojaFake_site</span></h2>
+    </div>
+    <div class="numero">
+        <img src="/imagens/face.png" alt="Logo_Facebook">
+        <h2>Facebook: <span style="color: blue;">Loja_site_fake</span></h2>
+    </div>
+    
 </body>
 </html>

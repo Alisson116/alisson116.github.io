@@ -17,6 +17,8 @@
             transition: background-color 0.3s ease;
             margin: 20px auto;
             display: block;
+            display: inline-block;
+            margin: 0 auto;
     }
     .botao:hover {
         background-color: #0056b3;
@@ -43,9 +45,9 @@
 </head>
 
     <body> 
-        <script> function cara_coroa()
-    {
-        
+        <script>
+            function cara() {
+            let total = "cara";
             let x
             let moeda
             let resultado = Math.random(); 
@@ -57,7 +59,6 @@
         {
             moeda = "coroa";
         }
-        console.log("Resultado", resultado, "Moeda:" ,moeda);
         if (moeda == "cara")
         {
             document.getElementById("cara").style.display = "block";
@@ -72,19 +73,60 @@
         {
             alert("Erro ao jogar moeda!");
         }
-        x = moeda;
-        if (x == "cara")
+
+        
+        if (moeda == total)
         {
-            document.getElementById("X").innerHTML = "Você ganhou 10% de desconto!";
+            document.getElementById("X").innerHTML = "Você ganhou!";
         }
-        else if (x == "coroa")
+        else
         {
-            document.getElementById("X").innerHTML = "Você ganhou 5% de desconto!";
+            document.getElementById("X").innerHTML = "Você perdeu!";
+        }
+        console.log("Resultado", resultado, "Moeda:" ,moeda);
+
+            }
+        </script>
+        <script> function coroa()
+    {
+        let total = "coroa";
+            let x
+            let moeda
+            let resultado = Math.random(); 
+            if  (resultado <0.5) 
+        {
+            moeda = "cara";
+        }
+            else if (resultado >=0.5) 
+        {
+            moeda = "coroa";
+        }
+        if (moeda == "cara")
+        {
+            document.getElementById("cara").style.display = "block";
+            document.getElementById("coroa").style.display = "none";
+        }
+        else if (moeda == "coroa")
+        {
+            document.getElementById("coroa").style.display = "block";
+            document.getElementById("cara").style.display = "none";
         }
         else
         {
             alert("Erro ao jogar moeda!");
         }
+
+
+        if (moeda == total)
+        {
+            document.getElementById("X").innerHTML = "Você ganhou!";
+        }
+        else
+        {
+            document.getElementById("X").innerHTML = "Você perdeu!";
+        }
+        console.log("Resultado", resultado, "Moeda:" ,moeda);
+
     }
     </script>
        
@@ -111,10 +153,13 @@
         </a>
         <h2>Você encontrou um easter egg! <br> Parabéns!<br></h2>
         <h2 style="color: #333;" align="center">Jogue <span style="color: brown;">Cara ou Coroa</span> para ganhar desconto!!</h2>
+        <h3 style="color: brown;">Cara ou Coroa?</h3>
+
         <img src="imagens/1_real_cara.png" alt="Cara" class="moeda_a" id="cara">
         <img src="imagens/1_real_coroa.png" alt="Coroa" id="coroa" class="moeda_b">
         <h3 id="X"></h3>
-        <button class="botao" onclick="cara_coroa()">Jogar</button>
+        <button class="botao" onclick="cara()">Cara</button>
+        <button class="botao" onclick="coroa()">Coroa</button>
        
         <script>
             let mensagem = "Você encontrou um easter egg! Parabéns!";

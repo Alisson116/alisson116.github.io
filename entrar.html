@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+<script>
+  fetch("dif.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+</script>
+    <h2><u>Entre com seu usuário e senha</u></h2><br>
+    <form action="comprar.html" method="post" align="center" style="margin-top: 20px;">
+        <label for="username">Usuário:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Senha:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Entrar">
+    </form>
+    <h3>Não tem uma conta? <a href="cadastrar.html"><button>Cadastre-se</button></a></h3>
+    
+    
+</body>
+</html>

@@ -7,25 +7,15 @@
 </head>
 <script src="script.js"></script>
 <body>
-    <div style="background-image: url('imagens/piso.jpeg.avif');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        padding: 20px;">
-        <h1 align="center"><i>Wood Company</i></h1>
-    </div>
-    <table style="width: 100%;
-        background-color: #333;
-        text-align: center;
-        border-collapse: collapse;">
-        <thead>
-            <tr>
-                <th style="padding: 10px; color: white;">Carrinho</th>
-            </tr>
-        </thead>    
-    </table>
-    <a href="index.html">
-        <img src="imagens/botao_home.png" alt="Botão Home" style="width: 100px; height: 100px; display: block; margin: 10px auto;" align="left"> <br>
-    </a>
+    <div id="header"></div>
+    <script>
+      fetch("inicio.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header").innerHTML = data;
+        });
+    </script>
+    <h2>Desculpe, essa função está em desenvolvimento</h2>
+    
 </body>
 </html>

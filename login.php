@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$host = "alisson116.wuaze.com";
+$host = "sql300.infinityfree.com"; 
 $usuario = "if0_38899924";
 $senha = "GDD9CKWc1Ip";
-$database = "if0_38899924_XXX";
+$database = "if0_38899924_banco_login";
 
 $conn = new mysqli($host, $usuario, $senha, $database);
 
@@ -25,7 +25,7 @@ if ($resultado->num_rows > 0) {
 
     if (password_verify($senhaForm, $usuarioData['senha'])) {
         $_SESSION['usuario'] = $usuarioForm;
-        header("Location: index.html");
+        echo "<script>window.location.href = 'index.html';</script>"; // Redireciona via JS
         exit();
     } else {
         echo "Senha incorreta! <a href='entrar.html'>Voltar</a>";

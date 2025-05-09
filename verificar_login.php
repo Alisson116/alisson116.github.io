@@ -1,13 +1,10 @@
 <?php
 session_start();
-header('content-type: application/json');
+header('Content-Type: application/json');
 
-if (isset($_SESSION['usuario'])) 
-{
+if (isset($_SESSION['usuario'])) {
     echo json_encode(['logado' => true, 'usuario' => $_SESSION['usuario']]);
-}
-else
-{
+} else {
     echo json_encode(['logado' => false]);
 }
 ?>

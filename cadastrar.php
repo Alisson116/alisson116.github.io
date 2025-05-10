@@ -1,14 +1,7 @@
 <?php
-$host = "sql300.infinityfree.com"; 
-$usuario = "if0_38899924";         
-$senha = "GDD9CKWc1Ip";            
-$database = "if0_38899924_banco_login"; 
-
-$conn = new mysqli($host, $usuario, $senha, $database);
-
-if ($conn->connect_error) {
-    die("Erro na conexão: " . $conn->connect_error);
-}
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+include("conexao.php");
 
 $usuarioForm = $_POST['usuario'];
 $senhaForm = $_POST['senha'];
